@@ -26,7 +26,7 @@ body{
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    
+    margin-top: 100px;
 }
 
 .container.start .user_result{
