@@ -75,6 +75,15 @@ body{
     margin-top: 1.5rem;
 }
 
+
+.score-table {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  margin-top: .3rem;
+}
+
+
 .option_image img{
     width: 50px;
 }

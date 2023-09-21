@@ -3,7 +3,16 @@ const gameContainer = document.querySelector(".container"),
 userResult = document.querySelector(".user_result img"),
 cpuResult = document.querySelector(".cpu_result img"),
 result = document.querySelector(".result"),
-optionImages = document.querySelectorAll(".option_image");
+optionImages = document.querySelectorAll(".option_image"),
+scoreTable = document.querySelector(".score-table");
+
+const score = {
+  User: 0,
+  Computer: 0,
+};
+
+scoreTable.textContent = score.User + " - " + score.Computer;
+
 
 optionImages.forEach((image, index) =>{
     image.addEventListener("click", (e) =>{
@@ -46,6 +55,11 @@ optionImages.forEach((image, index) =>{
 
             result.textContent = userValue === cpuValue ? "Draw" : `${outComeValue} Won!`; //altgr + comma
 
+            if (outComeValue != "Draw") {
+              score[outComeValue] += 1;
+              scoreTable.textContent = score.User + " - " + score.Computer;
+            }
+            
         }, 2500);
     });
 });
